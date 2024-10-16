@@ -4,9 +4,11 @@ import Image from "next/image";
 import { ConnectButton } from "thirdweb/react";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
-import { ecosystemWallet } from "thirdweb/wallets";
+import { ecosystemWallet, createWallet } from "thirdweb/wallets";
 
-const wallet = ecosystemWallet("ecosystem.solution-pirates-ecosystem");
+const wallet = 
+ecosystemWallet("ecosystem.solution-pirates-ecosystem");
+createWallet("io.metamask");
 
 export default function Home() {
   return (

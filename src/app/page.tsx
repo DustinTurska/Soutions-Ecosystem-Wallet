@@ -7,7 +7,9 @@ import { client } from "./client";
 import { ecosystemWallet, createWallet } from "thirdweb/wallets";
 
 const wallet = 
-ecosystemWallet("ecosystem.solution-pirates-ecosystem");
+ecosystemWallet("ecosystem.solution-pirates-ecosystem", {
+  partnerId: "2bac28dd-4d57-4240-80ff-5c9c33c0e111"
+});
 createWallet("io.metamask");
 
 export default function Home() {

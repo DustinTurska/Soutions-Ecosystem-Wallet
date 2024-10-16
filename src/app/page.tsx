@@ -4,6 +4,9 @@ import Image from "next/image";
 import { ConnectButton } from "thirdweb/react";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
+import { ecosystemWallet } from "thirdweb/wallets";
+
+const wallet = ecosystemWallet("ecosystem.solution-pirates-ecosystem");
 
 export default function Home() {
   return (
@@ -14,6 +17,7 @@ export default function Home() {
         <div className="flex justify-center mb-20">
           <ConnectButton
             client={client}
+            wallets={[wallet]}
             appMetadata={{
               name: "Example App",
               url: "https://example.com",
